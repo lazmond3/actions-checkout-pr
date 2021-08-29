@@ -6,6 +6,7 @@ inputs:
     description: 'このコメントをトリガーにして、アクションが発火する'
 outputs:
   result:
+    description: sha hash of the latest commit
     value: ${{ steps.get-pr.outputs.result }}
 runs:
   using: "composite"
