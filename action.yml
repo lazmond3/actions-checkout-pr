@@ -4,7 +4,9 @@ description: 'Checkout to issue commented PRs branch'
 inputs:
   keyword:
     description: 'このコメントをトリガーにして、アクションが発火する'
-  
+outputs:
+  result:
+    value: ${{ steps.get-pr.outputs.result }}
 runs:
   using: "composite"
   steps:
